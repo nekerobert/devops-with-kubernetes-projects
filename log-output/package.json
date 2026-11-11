@@ -1,0 +1,9 @@
+{
+    "name": "log-output",
+    "version": "1.0.0",
+    "description": "A Kubernetes application that outputs a random string every five seconds",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    }
+}
