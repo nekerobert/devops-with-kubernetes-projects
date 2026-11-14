@@ -53,9 +53,30 @@ kubectl get pods
 ```bash
 kubectl logs -f deployment/log-output
 ```
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+## Exercise 1.3 — Declarative approach
+
+The Kubernetes Deployment is managed declaratively using:
+
+`manifests/deployment.yaml`
+
+Apply the configuration:
+
+```bash
+kubectl apply -f manifests/deployment.yaml
+
+## Restart the Deployment:
+kubectl rollout restart deployment/log-output
+kubectl rollout status deployment/log-output
+
+## Follow application logs:
+kubectl logs -f deployment/log-output
 
 ## Exercise
 
 - Course: University of Helsinki — DevOps with Kubernetes 2026
 - Exercise: 1.1 — Getting started
+- Exercise: 1.3 - Declarative approach
 - Application: Log Output

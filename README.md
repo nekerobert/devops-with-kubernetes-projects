@@ -17,6 +17,7 @@ My practical exercises and projects for the University of Helsinki DevOps with K
 |---|---|---|
 | [1.1](https://github.com/nekerobert/devops-with-kubernetes-projects/tree/1.1/log-output) | Log Output | Generate and periodically output a random UUID with a timestamp. |
 | [1.2](https://github.com/nekerobert/devops-with-kubernetes-projects/tree/1.2/todo-app) | Todo App | Deploy a configurable Node.js HTTP server to Kubernetes. |
+| [1.3](https://github.com/nekerobert/devops-with-kubernetes-projects/tree/1.3/log-output) | Log Output | Manage the Kubernetes Deployment declaratively using YAML. |
 
 ## Repository structure
 
