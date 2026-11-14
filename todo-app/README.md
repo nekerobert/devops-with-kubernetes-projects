@@ -144,6 +144,23 @@ The Kubernetes Deployment manifest is located at:
 
 `manifests/deployment.yaml`
 
+Apply the configuration:
+
+```bash
+kubectl apply -f manifests/deployment.yaml
+```
+
+Restart the Deployment:
+````bash
+kubectl rollout restart deployment/log-output
+kubectl rollout status deployment/log-output
+````
+
+Follow application logs:
+````bash
+kubectl logs -f deployment/todo-app
+````
+
 The Deployment runs one replica of the Todo App.
 
 The application uses port `8080` inside the Kubernetes container, configured through the `PORT` environment variable.
@@ -175,5 +192,6 @@ todo-app/
 
 - **Course:** University of Helsinki — DevOps with Kubernetes 2026
 - **Exercise:** 1.2 — The project, step 1
+- **Exercise:** 1.4 — The project, step 2
 - **Application:** Todo App
 - **Docker image:** `nekerobert/todo-app:1.2`
