@@ -1,0 +1,9 @@
+{
+    "name": "todo-app",
+    "version": "1.0.0",
+    "description": "A simple web server for the DevOps with Kubernetes course",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    }
+}
