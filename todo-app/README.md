@@ -188,10 +188,67 @@ todo-app/
 - Kubernetes
 - k3d / K3s
 
+##
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+##
+
+
+## Exercise 1.5 — The project, step 3
+
+The Todo App responds to HTTP GET requests sent to the `/` endpoint by returning an HTML page.
+
+### Application response
+
+The application returns an HTML page containing the Todo App welcome message.
+
+### Accessing the application using port-forwarding
+
+First, check the running Pod:
+
+```bash
+kubectl get pods -l app=todo-app
+```
+
+Forward local port 3003 to port 8080 on the Todo App Deployment:
+
+```bash
+kubectl port-forward deployment/todo-app 3003:8080
+```
+
+Open the application in a browser:
+
+```text
+http://localhost:3003
+```
+
+Alternatively, verify the HTTP response using:
+
+```bash
+curl -i http://localhost:3003/
+```
+
+The application should return HTTP 200 OK and the HTML page.
+
+### Docker image
+
+```text
+nekerobert/todo-app:1.5
+```
+
+### Kubernetes configuration
+
+The application is deployed using:
+
+```text
+manifests/deployment.yaml
+```
+
+
 ## Exercise information
 
 - **Course:** University of Helsinki — DevOps with Kubernetes 2026
 - **Exercise:** 1.2 — The project, step 1
 - **Exercise:** 1.4 — The project, step 2
+- **Exercise:** 1.4 — The project, step 3
 - **Application:** Todo App
 - **Docker image:** `nekerobert/todo-app:1.2`
